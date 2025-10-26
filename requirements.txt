@@ -3,3 +3,5 @@ uvicorn
 python-multipart
 opencv-python-headless
 numpy
+face-recognition 
+pyzbar
