@@ -11,6 +11,12 @@ app = FastAPI(
     description="An API to find PII in OCR data and redact it on an image."
 )
 
+# --- Health Check Endpoint for Render ---
+@app.get("/")
+def health_check():
+    """A simple endpoint for Render's health check."""
+    return {"status": "ok", "message": "PII Redaction Service is running."}
+
 # --- Core Helper Functions ---
 
 def flatten_ocr_data(ocr_json: dict) -> list:
