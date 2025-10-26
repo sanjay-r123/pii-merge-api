@@ -13,8 +13,8 @@ app = FastAPI(
 
 # --- Health Check Endpoint for Render ---
 @app.get("/")
+@app.head("/")  # Just add this line - it's FREE
 def health_check():
-    """A simple endpoint for Render's health check."""
     return {"status": "ok", "message": "PII Redaction Service is running."}
 
 # --- Core Helper Functions ---
